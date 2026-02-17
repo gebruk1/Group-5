@@ -289,3 +289,8 @@ def test_status_constants_match_httpstatus():
     assert status.HTTP_404_NOT_FOUND == HTTPStatus.NOT_FOUND
     assert status.HTTP_405_METHOD_NOT_ALLOWED == HTTPStatus.METHOD_NOT_ALLOWED
     assert status.HTTP_409_CONFLICT == HTTPStatus.CONFLICT
+
+def test_intentional_failure_for_ci_debugging():
+    """Intentional failure for CI debugging exercise."""
+    assert 1 == 2
+
