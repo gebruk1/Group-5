@@ -277,3 +277,15 @@ class TestCounterEndpoints:
         assert response.status_code == HTTPStatus.BAD_REQUEST
 
         # TODO: Add an assertion to verify the error message specifically says 'Invalid counter name'S
+
+def test_status_constants_match_httpstatus():
+    """Status constants should match Python's HTTPStatus values."""
+    from src import status
+    from http import HTTPStatus
+
+    assert status.HTTP_200_OK == HTTPStatus.OK
+    assert status.HTTP_201_CREATED == HTTPStatus.CREATED
+    assert status.HTTP_204_NO_CONTENT == HTTPStatus.NO_CONTENT
+    assert status.HTTP_404_NOT_FOUND == HTTPStatus.NOT_FOUND
+    assert status.HTTP_405_METHOD_NOT_ALLOWED == HTTPStatus.METHOD_NOT_ALLOWED
+    assert status.HTTP_409_CONFLICT == HTTPStatus.CONFLICT
