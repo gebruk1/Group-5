@@ -1,0 +1,21 @@
+# coverage files
+.coverage
+htmlcov/
+.coverage.*
+
+# pytest cache
+.pytest_cache/
+**/.pytest_cache/
+
+# sqlite db files
+*.db
+
+# instance folders (Flask)
+instance/
+**/instance/
+
+# python cache
+__pycache__/
+*.pyc
+
+.DS_Store
